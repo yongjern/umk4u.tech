@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
+import { Archivo, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
+const archivo = Archivo({
   subsets: ["latin"],
-  variable: "--font-display"
+  variable: "--font-sans"
 });
 
 const ibmPlexMono = IBM_Plex_Mono({
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     }]
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "UMK4U | Tools built for UMK students",
     description: "Simple, focused digital tools for the Universiti Malaysia Kelantan community.",
     images: ["/logo_128.png"]
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${ibmPlexMono.variable}`}>
+    <html lang="en" data-type="software" data-site-kind="software" className={`${archivo.variable} ${ibmPlexMono.variable}`}>
       <body>{children}</body>
     </html>
   );
