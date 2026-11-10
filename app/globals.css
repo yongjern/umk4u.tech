@@ -132,11 +132,11 @@ svg { stroke-width: 1.7; }
 .mini-actions span { min-height: 72px; display: flex; align-items: center; gap: 10px; padding: 18px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 15px; }
 .mini-actions svg { width: 18px; color: var(--red); }
 
-.about-section { display: flex; align-items: center; background: var(--cream); color: #111014; }
+.about-section { display: flex; align-items: center; color: var(--cream); background: radial-gradient(circle at 18% 50%, #211506 0, #0d0a07 28%, #070708 62%); border-top: 1px solid #2f271d; }
 .about-grid { display: grid; grid-template-columns: 6fr 6fr; gap: 96px; align-items: start; }
-.about-heading .section-number { color: #8b4e00; }
+.about-heading .section-number { color: var(--orange); }
 .about-copy { max-width: 570px; padding-top: 35px; }
-.about-copy > p { margin: 0 0 24px; color: #4b4852; font-size: 20px; line-height: 1.65; }
+.about-copy > p { margin: 0 0 24px; color: var(--muted); font-size: 20px; line-height: 1.65; }
 .about-links { display: flex; gap: 32px; margin-top: 48px; font-size: 16px; font-weight: 600; }
 .about-links a { display: inline-flex; align-items: center; gap: 8px; }
 .about-links svg { width: 17px; }
