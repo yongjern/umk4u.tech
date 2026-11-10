@@ -12,6 +12,7 @@ import {
   Sparkles,
   Wifi
 } from "lucide-react";
+import Image from "next/image";
 
 const products = [
   {
@@ -73,7 +74,7 @@ export default function Home() {
       <header className="site-header">
         <div className="shell header-inner">
           <a className="brand" href="#top" aria-label="UMK4U home">
-            <span className="brand-mark">U4</span>
+            <Image className="brand-mark" src="/logo_hq.png" alt="" width={40} height={40} priority />
             <span className="brand-name">UMK4U</span>
           </a>
           <nav aria-label="Primary navigation">
@@ -153,7 +154,7 @@ export default function Home() {
 
       <footer>
         <div className="shell footer-inner">
-          <div><span className="brand-mark">U4</span><span><strong>UMK4U</strong><small>Built for students at Universiti Malaysia Kelantan.</small></span></div>
+          <div><Image className="brand-mark" src="/logo_hq.png" alt="UMK4U" width={40} height={40} /><span><strong>UMK4U</strong><small>Built for students at Universiti Malaysia Kelantan.</small></span></div>
           <div className="footer-links"><a href="https://wifi.umk4u.tech">UMKWifi</a><a href="https://my.umk4u.tech">MyUMK</a></div>
           <p>Independent student project<br />Not an official UMK service</p>
         </div>

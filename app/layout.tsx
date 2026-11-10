@@ -14,8 +14,32 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://umk4u.tech"),
   title: "UMK4U | Tools built for UMK students",
-  description: "Simple, focused digital tools for the Universiti Malaysia Kelantan community."
+  description: "Simple, focused digital tools for the Universiti Malaysia Kelantan community.",
+  icons: {
+    icon: "/logo_128.png",
+    apple: "/logo_128.png"
+  },
+  openGraph: {
+    type: "website",
+    url: "https://umk4u.tech",
+    siteName: "UMK4U",
+    title: "UMK4U | Tools built for UMK students",
+    description: "Simple, focused digital tools for the Universiti Malaysia Kelantan community.",
+    images: [{
+      url: "/logo_128.png",
+      width: 128,
+      height: 128,
+      alt: "UMK4U logo"
+    }]
+  },
+  twitter: {
+    card: "summary",
+    title: "UMK4U | Tools built for UMK students",
+    description: "Simple, focused digital tools for the Universiti Malaysia Kelantan community.",
+    images: ["/logo_128.png"]
+  }
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
