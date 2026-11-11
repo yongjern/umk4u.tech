@@ -15,7 +15,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://umk4u.tech"),
-  title: "UMK4U | Tools built for UMK students",
+  title: "𝐔𝐌𝐊𝟰𝐔 ✦ Tools built for UMK students",
   description: "Simple, focused digital tools for the Universiti Malaysia Kelantan community.",
   icons: {
     icon: "/logo_128.png",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://umk4u.tech",
     siteName: "UMK4U",
-    title: "UMK4U | Tools built for UMK students",
+    title: "𝐔𝐌𝐊𝟰𝐔 ✦ Tools built for UMK students",
     description: "Simple, focused digital tools for the Universiti Malaysia Kelantan community.",
     images: [{
       url: "/logo_128.png",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "UMK4U | Tools built for UMK students",
+    title: "𝐔𝐌𝐊𝟰𝐔 ✦ Tools built for UMK students",
     description: "Simple, focused digital tools for the Universiti Malaysia Kelantan community.",
     images: ["/logo_128.png"]
   }
