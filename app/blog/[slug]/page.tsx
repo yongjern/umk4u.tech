@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Clock3 } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
@@ -69,19 +69,11 @@ export default async function PostPage({ params }: PostPageProps) {
         <article>
           <header className="article-hero">
             <div className="shell article-hero-inner" data-enter>
-              <Link className="article-back" href="/blog"><ArrowLeft /> Back to all posts</Link>
-              <div className="post-tags">{post.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+              <time className="article-label" dateTime={post.date}>{dateFormatter.format(new Date(post.date))}</time>
               <h1>{post.title}</h1>
-              <p>{post.description}</p>
-              <div className="article-meta">
-                <span>By {post.author}</span>
-                <time dateTime={post.date}>{dateFormatter.format(new Date(post.date))}</time>
-                <span><Clock3 /> {post.readingTime} min read</span>
-              </div>
             </div>
           </header>
           <div className="shell article-layout">
-            <aside aria-label="Article information"><span>Published</span><b>{dateFormatter.format(new Date(post.date))}</b><span>Reading time</span><b>{post.readingTime} minutes</b></aside>
             <div className="article-content">
               <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
             </div>

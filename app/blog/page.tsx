@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, ArrowUpRight, Clock3 } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
@@ -55,19 +55,12 @@ export default function BlogPage() {
             <div className="post-list">
               {posts.length === 0 ? (
                 <p className="empty-posts">No posts have been published yet.</p>
-              ) : posts.map((post, index) => (
+              ) : posts.map((post) => (
                 <article className="post-row" key={post.slug}>
-                  <span className="post-index">{String(index + 1).padStart(2, "0")}</span>
                   <div className="post-row-copy">
-                    <div className="post-meta">
-                      <time dateTime={post.date}>{dateFormatter.format(new Date(post.date))}</time>
-                      <span><Clock3 /> {post.readingTime} min read</span>
-                    </div>
                     <h3><Link href={`/blog/${post.slug}`}>{post.title}</Link></h3>
-                    <p>{post.description}</p>
-                    <div className="post-tags">{post.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+                    <time dateTime={post.date}>{dateFormatter.format(new Date(post.date))}</time>
                   </div>
-                  <Link className="post-arrow" href={`/blog/${post.slug}`} aria-label={`Read ${post.title}`}><ArrowUpRight /></Link>
                 </article>
               ))}
             </div>
