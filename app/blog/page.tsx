@@ -39,18 +39,16 @@ export default function BlogPage() {
       <main className="blog-page">
         <section className="blog-hero">
           <div className="shell blog-hero-inner" data-enter>
-            <p className="kicker">Notes from an independent student project</p>
-            <h1>The UMK4U<br />blog.</h1>
-            <p>Product updates, practical campus guides, and what we learn while building tools for UMK students.</p>
-            <span className="blog-count">{String(posts.length).padStart(2, "0")} articles</span>
+            <p className="kicker">UMK4U writing</p>
+            <h1>Blog</h1>
           </div>
         </section>
 
         <section className="blog-list-section" id="posts">
           <div className="shell">
             <div className="blog-list-heading">
-              <p className="section-number">Latest writing</p>
               <h2>All posts</h2>
+              <span>{String(posts.length).padStart(2, "0")} posts</span>
             </div>
             <div className="post-list">
               {posts.length === 0 ? (
