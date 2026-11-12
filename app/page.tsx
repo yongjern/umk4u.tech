@@ -10,6 +10,7 @@ import {
   Wifi
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 function WifiPreview() {
   return (
@@ -71,6 +72,7 @@ export default function Home() {
           <nav aria-label="Primary navigation">
             <a href="#umkwifi">UMKWifi</a>
             <a href="#myumk">MyUMK</a>
+            <Link href="/blog">Blog</Link>
             <a href="#about">About</a>
           </nav>
           <a className="header-link" href="#umkwifi">See the tools <ArrowDown /></a>
@@ -152,7 +154,7 @@ export default function Home() {
           <div className="footer-close"><h2>Two tools for<br />your next task.</h2><a className="primary-action" href="#umkwifi">See the tools <ArrowUpRight /></a></div>
           <div className="footer-directory">
             <a className="brand" href="#top"><Image className="brand-mark" src="/logo_hq.png" alt="" width={40} height={40} /><span className="brand-name">UMK4U</span></a>
-            <div className="footer-links"><a href="https://wifi.umk4u.tech">UMKWifi</a><a href="https://my.umk4u.tech">MyUMK</a><a href="#about">About</a></div>
+            <div className="footer-links"><a href="https://wifi.umk4u.tech">UMKWifi</a><a href="https://my.umk4u.tech">MyUMK</a><Link href="/blog">Blog</Link><a href="#about">About</a></div>
             <p>Independent student project<br />Not an official UMK service</p>
           </div>
         </div>

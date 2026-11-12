@@ -4,7 +4,7 @@ import "./globals.css";
 
 const archivo = Archivo({
   subsets: ["latin"],
-  variable: "--font-sans"
+  variable: "--font-sans" 
 });
 
 const ibmPlexMono = IBM_Plex_Mono({
