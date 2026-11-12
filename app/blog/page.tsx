@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 };
 
 const dateFormatter = new Intl.DateTimeFormat("en-MY", {
-  day: "numeric",
-  month: "long",
+  day: "2-digit",
+  month: "2-digit",
   year: "numeric",
   timeZone: "UTC"
 });
@@ -39,7 +39,7 @@ export default function BlogPage() {
       <main className="blog-page">
         <section className="blog-hero">
           <div className="shell blog-hero-inner" data-enter>
-            <h1>UMK4U blog</h1>
+            <h1><span>UMK4U.tech</span> News</h1>
           </div>
         </section>
 
@@ -56,6 +56,7 @@ export default function BlogPage() {
                 <article className="post-row" key={post.slug}>
                   <div className="post-row-copy">
                     <h2><Link href={`/blog/${post.slug}`}>{post.title}</Link></h2>
+                    <span className="post-row-leader" aria-hidden="true" />
                     <time dateTime={post.date}>{dateFormatter.format(new Date(post.date))}</time>
                   </div>
                 </article>
