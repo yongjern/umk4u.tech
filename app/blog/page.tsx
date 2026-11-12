@@ -39,16 +39,15 @@ export default function BlogPage() {
       <main className="blog-page">
         <section className="blog-hero">
           <div className="shell blog-hero-inner" data-enter>
-            <p className="kicker">UMK4U writing</p>
-            <h1>Blog</h1>
+            <h1>UMK4U blog</h1>
           </div>
         </section>
 
         <section className="blog-list-section" id="posts">
           <div className="shell">
-            <div className="blog-list-heading">
-              <h2>All posts</h2>
-              <span>{String(posts.length).padStart(2, "0")} posts</span>
+            <div className="blog-list-heading" aria-hidden="true">
+              <span>Title</span>
+              <span>Published</span>
             </div>
             <div className="post-list">
               {posts.length === 0 ? (
@@ -56,7 +55,7 @@ export default function BlogPage() {
               ) : posts.map((post) => (
                 <article className="post-row" key={post.slug}>
                   <div className="post-row-copy">
-                    <h3><Link href={`/blog/${post.slug}`}>{post.title}</Link></h3>
+                    <h2><Link href={`/blog/${post.slug}`}>{post.title}</Link></h2>
                     <time dateTime={post.date}>{dateFormatter.format(new Date(post.date))}</time>
                   </div>
                 </article>
