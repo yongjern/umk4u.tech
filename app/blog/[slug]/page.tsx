@@ -69,6 +69,7 @@ export default async function PostPage({ params }: PostPageProps) {
         <article>
           <header className="article-hero">
             <div className="shell article-hero-inner" data-enter>
+              <p className="article-eyebrow">Announcement / UMK4U update</p>
               <time className="article-label" dateTime={post.date}>{dateFormatter.format(new Date(post.date))}</time>
               <h1>{post.title}</h1>
             </div>

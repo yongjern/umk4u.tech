@@ -39,7 +39,8 @@ export default function BlogPage() {
       <main className="blog-page">
         <section className="blog-hero">
           <div className="shell blog-hero-inner" data-enter>
-            <h1><span>UMK4U.tech</span> News</h1>
+            <p className="blog-eyebrow">News / UMK4U updates</p>
+            <h1>News and announcements</h1>
           </div>
         </section>
 
